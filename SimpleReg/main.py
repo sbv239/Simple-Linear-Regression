@@ -43,7 +43,7 @@ def plot_the_model_and_rmse(trained_weight, trained_bias, feature, label, pochs,
     x0 = 0
     y0 = trained_bias
     x1 = feature[-1]
-    y1 = trained_bias[0] + x1 * trained_weight[0]
+    y1 = trained_bias + x1 * trained_weight[0]
     ax1.plot([x0, x1], [y0, y1], c='r')
 
     ax2.plot(epochs, rmse, label="Loss")
